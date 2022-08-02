@@ -1,5 +1,9 @@
 import 'dart:io';
 
+/*
+- Classificação de Sistemas 2x2 e 3x3 (no caso 3x3, através de determinante). 
+-
+*/
 void main() {
   double x1, x2, x3, y1, y2, y3, z1, z2, z3;
   while (true) {
@@ -9,6 +13,15 @@ void main() {
     print("3 - Sair");
     String? escolha = stdin.readLineSync()!;
     if (escolha == '1') {
+      print("Qual o primeiro coeficiente de x");
+      x1 = double.parse(stdin.readLineSync()!);
+      print("Qual o segundo coeficiente de x?");
+      x2 = double.parse(stdin.readLineSync()!);
+      print("Qual o primeiro coeficiente de y?");
+      y1 = double.parse(stdin.readLineSync()!);
+      print("Qual o segundo coeficiente de y");
+      y2 = double.parse(stdin.readLineSync()!);
+      
     } else if (escolha == '2') {
       print("Qual o primeiro coeficiente de x?");
       x1 = double.parse(stdin.readLineSync()!);
