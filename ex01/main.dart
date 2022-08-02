@@ -21,7 +21,22 @@ void main() {
       y1 = double.parse(stdin.readLineSync()!);
       print("Qual o segundo coeficiente de y");
       y2 = double.parse(stdin.readLineSync()!);
-      
+      bool spd = x1 / x2 != y1 / y2 ? true : false;
+      if (spd == true) {
+        print("Sistema é Possível e Determinado");
+      } else {
+        print("Qual o resultado da primeira equação?");
+        double resultado1 = double.parse(stdin.readLineSync()!);
+        print("Qual o resultado da segunda equação?");
+        double resultado2 = double.parse(stdin.readLineSync()!);
+        bool spi =
+            x1 / x2 == y1 / y2 && x1/x2 == resultado1 / resultado2 && y1/y2 == resultado1/resultado2? true : false;
+        if (spi) {
+          print("Sistema Possível Indeterminado");
+        } else {
+          print("Sistema Impossível");
+        }
+      }
     } else if (escolha == '2') {
       print("Qual o primeiro coeficiente de x?");
       x1 = double.parse(stdin.readLineSync()!);
